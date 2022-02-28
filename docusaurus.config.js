@@ -6,7 +6,7 @@ module.exports = {
   title: 'OER Course Title',
   tagline: 'OER Tag/Keyword',
   url: 'https://Seneca-ICTOER.github.io/OERTemplate/',
-  baseUrl: '/',
+  baseUrl: '/OERTemplate/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
