@@ -5,7 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'OER Course Title',
   tagline: 'OER Tag/Keyword',
-  url: 'https://Seneca-ICTOER.github.io/OERTemplate/',
+  url: 'https://Seneca-ICTOER.github.io/',
   baseUrl: '/OERTemplate/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
