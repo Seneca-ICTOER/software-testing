@@ -3,7 +3,7 @@ id: intro
 title: Table of contents
 sidebar_position: 1
 slug: /
-description: Contents of (course notes title here)
+description: Contents of Software Testing
 ---
 
 # Table of contents
