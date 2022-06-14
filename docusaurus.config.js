@@ -3,19 +3,19 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'OER Course Title',
-  tagline: 'OER Tag/Keyword',
-  url: 'https://Seneca-ICTOER.github.io/',
-  baseUrl: '/OERTemplate/',
+  title: 'Software Testing',
+  tagline: 'Software Testing',
+  url: 'https://software-testing.sdds.ca',
+  baseUrl: '/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'Seneca-ICTOER',
-  projectName: 'OERTemplate',
+  projectName: 'software-testing',
   themeConfig: {
     navbar: {
-      title: 'OER Course Title',
+      title: 'Software Testing',
       logo: {
         alt: 'Seneca College',
         src: 'img/logo.svg',
@@ -29,7 +29,7 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'OER Course Title',
+          title: 'Software Testing',
           items: [
             {
               label: 'Contents',
@@ -55,7 +55,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-          editUrl: 'https://github.com/Seneca-ICTOER/OERTemplate/tree/main',
+          editUrl: 'https://github.com/Seneca-ICTOER/software-testing/tree/main',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
