@@ -44,7 +44,7 @@ description: Contents of Software Testing
 - [Quality Assurance](F-QA/QA-1.md)
 - [The Software Test Plan](F-QA/test-plan-4.md)
 - [Test Cases](F-QA/test-case-5.md)
-- [Jira](F-QA/jira-6.md)
+- [Jira](F-QA/Jira-6.md)
 - [Bug Reporting](F-QA/bug-report-7.md)
 - [Version Control](F-QA/version-control-7.md)
 - [Quality Assurance Workflow ](F-QA/workflow-9.md)
