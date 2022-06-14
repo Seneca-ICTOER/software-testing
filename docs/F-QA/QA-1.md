@@ -21,7 +21,7 @@ The agile approach to project management has a much more flexible way of breakin
 
 ### Themes
 
-A theme is one of the major goals of the project. It is usually a long term objective that is a very major and significant component of the project. a theme can also be viewed as a major strategic business objective. For example, if you decide you want to break into the project management software market then this would be the theme of your project. Of course a theme is too broad and objective and it needs to be broken down into smaller, more manageable objectives.
+A theme is one of the major goals of the project. It is usually a long term objective that is a very major and significant component of the project. a theme can also be viewed as a major strategic business objective. For example, if you decide you want to break into the project management software market then this would be the theme of your project. Of course, a theme is too broad and objective and it needs to be broken down into smaller, more manageable objectives.
 
 ### Epics
 
