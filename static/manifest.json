@@ -4,9 +4,9 @@
 	"display": "standalone",
 	"scope": "./",
 	"start_url": "./",
-	"name": "OER Course Title",
-	"short_name": "OER Course Short Name",
-	"description": "OER Course Description",
+	"name": "Software Testing",
+	"short_name": "Software Testing",
+	"description": "Fundamentals of Software Testing",
 	"icons": [
 		{
 			"src": "img/pwa/icon-192x192.png",
