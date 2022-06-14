@@ -9,7 +9,7 @@ description: How to write a software test plan.
 
 This software test plan is one of the most fundamental documents for software testing. However, with the rise of agile processes, it is frequently ignored. This is unfortunate because the test plan provides an overview of how all the software testing should be conducted.
 
-The test plan is really a project plan for the system testing. It is really the instruction manual 4 the testing process. The test plan should include:
+The test plan is really a project plan for the system testing. It is really the instruction manual for the testing process. The test plan should include:
 
 - A description of how the testing will be performed at a particular level, this could be a description of how testing for the entire system is performed or how user acceptance testing is to be performed.
 
@@ -29,7 +29,7 @@ The test plan is really a project plan for the system testing. It is really the 
 
 The test strategy is a short, separate document which is often written before the test plan. The purpose of the test strategy, is to define the major test objectives and to make sure that the test aligns with the organizational needs and goals. The test strategy is to make sure that the big picture of what the test is all about and why the test is being conducted is not lost. The test strategy document will typically include:
 
-- It is scription of what makes this project unique such as the way it is used or for technology involved,
+- It is a description of what makes this project unique such as the way it is used or for technology involved,
 
 - A description of the SuccessFactors that are being tested, for example, reliability correctness usability, etc,
 

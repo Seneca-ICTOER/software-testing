@@ -39,21 +39,23 @@ In addition to compilation errors, compilers produce warnings. These are not sev
 
 Another source of errors are from the linker. To understand what these messages mean, we need to review the process of separate compilation, depicted below.
 
-!["Separate Compilation" ](/img/separate-compilation.jpg) 
+!["Separate Compilation" ](/img/separate-compilation.jpg)
 
-Once you break your program into separate **.c** source code files, you will be using separate compiletion. This means that each source file is compiled separately to produce an object file. The object file is the compiled version of the code, represented as native instructions for your particular CPU. Since your main.c references functions in functions.c, these references need to be fixed so that main knows where to find the functions it calls. Putting the object files together and fixing the reference to functions in other object files is the job of a program called the **linker**. 
+Once you break your program into separate **.c** source code files, you will be using separate compiletion. This means that each source file is compiled separately to produce an object file. The object file is the compiled version of the code, represented as native instructions for your particular CPU. Since your main.c references functions in functions.c, these references need to be fixed so that main knows where to find the functions it calls. Putting the object files together and fixing the reference to functions in other object files is the job of a program called the **linker**.
 
 The other type of error is a runtime error or what we call a semantic error. These occur because your program doesn't do the right thing. You detect them when you run the program by observing that the program fails or by observing that it produces incorrect output. These semantic errors are often far more difficult to find than the syntactic errors. We will not spend a lot of time on syntactic errors in this course and will concentrate primarily on semantic errors. The linker produces its own error messages which say one of two things:
+
 - It was looking for something and could not find it,
 - It was looking for something and found two or more of it.
 
-When the linker goes looking for a variable or function, it expects to find one of what it is looking for. If it finds zero, it cannot complete the link process as part of the code is missing. If it finds two definitions of the same thing, then it is left not knowing which it should use so it abandons the linking process. 
+When the linker goes looking for a variable or function, it expects to find one of what it is looking for. If it finds zero, it cannot complete the link process as part of the code is missing. If it finds two definitions of the same thing, then it is left not knowing which it should use so it abandons the linking process.
 
-All linker errors come down to one of these two errors. The trouble is that the messages from the linker are often not clear. This is particularly a problem when working with template-based C++ code where the messages can span multiple lines. What you need to remember is that it is saying that it either did not find something or found two of something. Then, read the message carefully looking for names that you recognize that indicate what is missing or duplicated. 
+All linker errors come down to one of these two errors. The trouble is that the messages from the linker are often not clear. This is particularly a problem when working with template-based C++ code where the messages can span multiple lines. What you need to remember is that it is saying that it either did not find something or found two of something. Then, read the message carefully looking for names that you recognize that indicate what is missing or duplicated.
 
 Many people wonder why the header files are not compiled. Header files are textually included in the C implementation files, which are then compiled. This means that your header functions are compiled, but only by being included in the implementation files.
 
 The common reasons for getting a message from the linker are:
+
 - you wrote the declaration for a function or variable and forgot to write the definition,
 - you forgot you already defined a function or variable and defined it twice,
 - you accidentally used the same name in different parts of the program,
@@ -66,6 +68,7 @@ int square(const int n);
 ```
 
 The declaration tells the compiler:
+
 - the name of the function,
 - the number and type of the parameters,
 - the type returned by the function.
@@ -94,7 +97,6 @@ int n;
 
 This does not declare the variable n, but defines it. This means that it allocates memory for it and associates the memory address with the name n. If you include this into two implementation files, it will allocate memory for the same variable twice. When the object files are sent to the linker, it will find two areas of memory associated with the same variable and not know which one to use, resulting in a linker error. The way to overcome this problem is to replace the definition of the variable in the header file with a declaration.
 
-
 ```c
 #ifndef HEADER_H
 #define HEADER_H
@@ -119,7 +121,7 @@ There are numerous techniques you can use to try and track down the bugs in a pr
 - Often when you see a program executing a certain piece of code you are mystified as how it got to execute that piece of code. In situations like this you try and answer the question how did I end up executing this piece of code?
 
 - Often you need to see the values of individual variables and watch them change to figure out exactly what is going wrong.
-  
+
   Debugging can be very complicated and many bugs our elusive and very difficult to track down. Finding these bugs can be both frustrating and very time consuming. The answer to how to find them is usually one of cleverness and persistence. Sometimes a bug can take weeks to find. Fortunately, as you become more experienced, you get better at finding bugs and getting an intuition as to what causes a particular type of problem.
 
 ## Debugging Clues
@@ -205,6 +207,7 @@ Several problems can occur when doing arithmetic calculations. These include:
 ### Non-Zero Return Code
 
 This is difficult to debug since it could be caused by many things. Consider:
+
 - divide by zero
 - out of memory
 

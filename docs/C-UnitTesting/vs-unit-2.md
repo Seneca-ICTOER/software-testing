@@ -132,11 +132,11 @@ extern "C"
 #endif
 ```
 
-What I have done in this piece of code is to include the header file for the software under test inside an **extern “C”** block. This prevents the C compiler from altering the names and allows the two languages to be linked together. I called this file **mathfuncs_r.h** and placed it in the test project. The **_r** is used to indicate it references the original header file. Next, you need to tell the test project where to find the header files for the project under test. This is done by editing the test project properties under **C++ | General | Additional Include Directories**. You should add paths to include the directories in which the header files are stored for the code you are testing, as well as the test project. Once done, the include paths should look like:
+What I have done in this piece of code is to include the header file for the software under test inside an **extern “C”** block. This prevents the C compiler from altering the names and allows the two languages to be linked together. I called this file **mathfuncs_r.h** and placed it in the test project. The **\_r** is used to indicate it references the original header file. Next, you need to tell the test project where to find the header files for the project under test. This is done by editing the test project properties under **C++ | General | Additional Include Directories**. You should add paths to include the directories in which the header files are stored for the code you are testing, as well as the test project. Once done, the include paths should look like:
 
 !["Visual Studio Test Include Path" ](/img/vs-test-include.jpg)
 
-The final step is to go the **Build** menu at the top and select \*Build All\*\* . You should ckeck the output window at the bottom to be sure that the solution compiled correctly. It should say that two projects were compiled and zero failed. 
+The final step is to go the **Build** menu at the top and select \*Build All\*\* . You should ckeck the output window at the bottom to be sure that the solution compiled correctly. It should say that two projects were compiled and zero failed.
 
 ## Running the Tests
 
@@ -190,7 +190,7 @@ namespace MathTestSuite
 		{
 			Logger::WriteMessage("In Class Cleanup");
 		}
-		
+
 		TEST_METHOD(SquareTest)
 		{
 			Logger::WriteMessage("In Square test");
@@ -221,7 +221,7 @@ namespace MathTestSuite
 }
 ```
 
-We can run this code using the command ```vstest.console.exe UnitTest1.dll```. This command should be executed in a Windows cmd shell and will produce the output shown below. Note the order in which the initialize and cleanup functions are run.
+We can run this code using the command `vstest.console.exe UnitTest1.dll`. This command should be executed in a Windows cmd shell and will produce the output shown below. Note the order in which the initialize and cleanup functions are run.
 
 ```
 vstest.console.exe UnitTest1.dll
@@ -245,4 +245,4 @@ Test Run Successful.
 Total tests: 3
      Passed: 3
  Total time: 0.2394 Seconds
- ```
+```

@@ -21,7 +21,7 @@ A project is normally set up by the project administrator or project lead who th
 
 Jira is one of the more popular tools for managing software projects today. It is certainly not the only tool, but it is one of the currently popular tools. Some of the capabilities that tools like this provide include:
 
-- Do to add users to your project,
+- Add users to your project,
 - Creating issues and placing them in one of the Kanban columns,
 - Assigning issues two one of the team members,
 - Moving issues through the Kanban columns,

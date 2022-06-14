@@ -14,8 +14,8 @@ There are a great many ways to develop a software project. No one way can be sai
 Scrum is an agile strategy where the team works in sprints. A sprint is a few days to a week and team members select the work they can complete during the sprint period. Rather than having a manager assign work to the team members, the team members themselves select the work they want to do. This has the benefit that work is selected by the team member most interested in a particular issue and most capable of working on it.
 
 ## Project Workflow
-In a project like this, we will use the tools we have discussed to help us manage the workflow. We will use Jira to manage the issues, the status of the issues, and use it to assign issues to personnel. Git will be used to store all of the documents produced by the project. An outline of the workflow that we will use is shown in the diagram below.
 
+In a project like this, we will use the tools we have discussed to help us manage the workflow. We will use Jira to manage the issues, the status of the issues, and use it to assign issues to personnel. Git will be used to store all of the documents produced by the project. An outline of the workflow that we will use is shown in the diagram below.
 
 !["QA Project Workflow" ](/img/workflow1.jpg)
 
@@ -27,8 +27,8 @@ The workflow begins in the top left of the diagram where the entire team will ge
 2. Identify data structures
 
 ### Step 2 (Team Leader 1)
-In the second step, the group will identify the data structures needed to store all the information about the problem. In modern software design, it is common to identify the data structures before you try and build the functionality of the system. During this step, the group will identify with that a structures and roughly define their purpose and what they have to contain. A team leader will be selected who will be in change of running Jira to create issues, assign people to work on issues, and update the status of issues. A new team leader will be selected for every step so that all of the team members have a chance to be the team leader. If everyone has been a team leader once, then the team leader duties will cycle through the team members. The details of the step are:
 
+In the second step, the group will identify the data structures needed to store all the information about the problem. In modern software design, it is common to identify the data structures before you try and build the functionality of the system. During this step, the group will identify with that a structures and roughly define their purpose and what they have to contain. A team leader will be selected who will be in change of running Jira to create issues, assign people to work on issues, and update the status of issues. A new team leader will be selected for every step so that all of the team members have a chance to be the team leader. If everyone has been a team leader once, then the team leader duties will cycle through the team members. The details of the step are:
 
 1. Create Jira issue for each data structure
 2. Assign each issue to a team member who creates data struct in header files
@@ -50,6 +50,7 @@ The format of a test plan has been described previously and you can refer back t
 !["Function Specification" ](/img/function-spec.jpg)
 
 The detailed steps are:
+
 1. Create an issue for each function specification
 2. Create an issue for the test plan
 3. Team members an issue to wrok on
@@ -70,11 +71,11 @@ In the fourth step, the function specifications and test plan will be passed onw
 
 The fifth step is all about running the unit tests that were developed in the fourth step, identifying any bugs, reporting the bugs, and having developers fix the bugs. The detailed steps are:
 
-1.	Add issues to execute each of the tests
-2.	Team members will take tests and perform them
-3.	Failed tests will be reported as bugs to Jira
-4.	Team members will take bugs and fix them
-5.	Repeat steps 2-4 until complete.
+1. Add issues to execute each of the tests
+2. Team members will take tests and perform them
+3. Failed tests will be reported as bugs to Jira
+4. Team members will take bugs and fix them
+5. Repeat steps 2-4 until complete.
 
 ### Step 6 (Team Leader 5)
 
@@ -94,7 +95,7 @@ Now that the code has passed the unit tests, the structure of the code is close 
 The team will now go on to assemble the data structures and functions into a working solution. The QA team will develop integrations tests and execute the tests. Any bugs found will be reported and team members will fix the bugs. The details are:
 
 1. Add issues to complete the implementation of the application.
-2. QA members will develop integration tests. 
+2. QA members will develop integration tests.
 3. Integration tests will be run and any bugs reported.
 4. Team members will pick bugs to work on and go through an edit / test cycle until fixed.
 5. Repeat steps 3-4 until no bugs remain.
@@ -103,11 +104,7 @@ The team will now go on to assemble the data structures and functions into a wor
 
 The QA team will develop the final acceptance tests and execute the tests. Any bugs found will be reported and team members will fix the bugs. The details are:
 
-1. QA members will develop acceptance tests. 
+1. QA members will develop acceptance tests.
 2. Acceptance tests will be run and any bugs reported.
 3. Team members will pick bugs to work on and go through an edit / test cycle until fixed.
-4. Repeat steps 2-3 until no bugs remain. 
-
-
-
-
+4. Repeat steps 2-3 until no bugs remain.
