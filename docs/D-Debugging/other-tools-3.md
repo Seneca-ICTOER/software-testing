@@ -7,34 +7,36 @@ description: Discussion of other debugging tools.
 
 # Other Debugging Tools
 
-There are other debugging tools, most of which are less frequently used then print statements and interactive debuggers. in the sections below we will examine some of their techniques and when it might be appropriate to use them.
+There are other debugging tools, most of which are less frequently used than print statements and interactive debuggers. in the sections below we will examine some of these tools and when it might be appropriate to use them.
 
 ## Log Files
 
-Log files are simply files containing text and values written out by programs as they execute. Log files have the advantage that the information can be gathered whether the programmer is actually sitting there watching the program execute or not. Log files can be gathered over a long period of time and can be triggered to gather output only when specific erroneous conditions arise. Log files can gather valuable information to aid in the debugging of a problem which happens in a production system. Trying to debug a problem but happens in a production system long after the problem has happened is very difficult without log output to help you.
+Log files are simply files containing text and values written out by programs as they execute. Log files have the advantage that the information can be gathered whether the programmer is actually sitting there watching the program execute or not. Log files can be gathered over a long period of time and can be triggered to gather output only when specific erroneous conditions arise. Log files can gather valuable information to aid in the debugging of a problem which happens in a production system. Trying to debug a problem that happens in a production system, long after the problem has happened, is very difficult without log output to help you.
 
-Another situation where log output is very useful is when you are working on distributed programs. These are programs which work on many computers and make remote function calls from one computer to another. Tracking this sort of program is very difficult simply because different parts of the program are actually executing on different computers. One of the ways to deal with this situation is too have every computer right to a central log file located on the Internet. You could have a server setup to gather these inputs and ban write them to a file. The other way to do this would be to have each computer write its own log file to its own file system and then to examine these later.
-Log files typically contain a set all the information that identifies each line written to the log file. Although the information included at the start of any line may very, you might want to include the following information.
+Another situation where log output is very useful is when you are working on distributed programs. These are programs which work on many computers and make remote function calls from one computer to another. Tracking this sort of program is very difficult simply because different parts of the program are actually executing on different computers. One of the ways to deal with this situation is too have every computer write to a central log file located on the Internet. You could have a server setup to gather these inputs and write them to a file. The other way to do this would be to have each computer write its own log file to its own file system and then to examine these later.
 
-- The name of the computer producing the output
-- The name of the program producing the output
-- The ID of the thread producing the output
-- The timestamp of the output to the millisecond
-- The name of the function producing the output
+Log files typically contain the information that identifies each line written to the log file. Although the information included at the start of any line may very, you might want to include the following information.
+
+- The name of the computer producing the output,
+- The name of the program producing the output,
+- The ID of the thread producing the output,
+- The timestamp of the output to the millisecond,
+- The name of the function producing the output,
 - Including the name of the file producing the output and the line number producing the output. Note that this information can be obtained from the preprocessor macros **\_\_FILE\_\_** and **\_\_LINE\_\_** which will be replaced by the file name as a string in double quotes and the line number as an integer. These reflect the line in the file and can be easily added to a print statement.
 - An informational message that might show the values of variables, describe an exception caught or an unusual situation which has occurred.
-  It will log file is being used on a program which is known to have bugs on it and is not in production then you might want to flush the output stream after every line is written to the log file to make sure that all of the output reaches the file. While this will guarantee that alvey output does reach the file, it will have a serious effect on the performance of your program. Therefore, this technique cannot be used in a production system since it will severely slow the execution of the program. In fact large amounts of debug output produced in any kind of debug scenario for a production system will have and negative effect on the overall performance of the system. Debug output for production systems have to be carefully designed to have minimum impact on the performance of the system.
+  If the log file is being used on a program which is known to have bugs in it and is not in production, then you might want to flush the output stream after every line is written to the log file to make sure that all of the output reaches the file. While this will guarantee that all output reaches the file, it will have a serious effect on the performance of your program. Therefore, this technique cannot be used in a production system since it will severely slow the execution of the program. In fact, large amounts of debug output produced in any kind of debug scenario for a production system will have a negative effect on the overall performance of the system. Debug output for production systems have to be carefully designed to have minimum impact on the performance of the system.
 
 ### Log4c
 
-Log4c Is a small log library that we have written for you. This library is written entirely in C and can be used with either C or C++. The general concept of using it is that you first open a log file, and then you write messages to the logfile. the message is you write to the log file would typically show you the values of variables at key points in your code and sometimes just to produce messages that tell you where you are in the code. You can also produce messages to tell you about the code has gotten itself into an erroneous situation or to issue warnings to tell you that something might be wrong.
+Log4c is a small log library that we have written for you. This library is written entirely in C and can be used with either C or C++. The general concept of using it is that you first open a log file, and then write messages to the logfile. The message you write to the log file would typically show the values of variables at key points in your code and sometimes that tell you where you are in the code. You can also produce messages to tell you that the code has gotten itself into an erroneous situation.
 
 There are three levels of messages you can send to the log file.
 
-- ERROR (**L4C_ERROR**) - This would be a very serious message indicating a major problem with the code that could result in erroneous output or a possible crash of the program.
-- WARNING (**L4C_WARNING**) - A warning is less severe than an error but it still indicates that something is wrong with the program. Warnings are something that should be taken seriously even though they might not cause erroneous results orprogram termination.
-- INFO (**L4C_INFO**) - These are informational messages simply to tell the programmer that something has happened of interest inside the program. Often, you would like to produce debug informational messages that are not telling if it's something is wrong with the program but simply helping you to debug the program.
-  When you are using the log4c library, you should interact with the data structures using the functions provided. These functions know how to manipulate the data structures correctly. Trying to manipulate the data structures yourself, without using the supplied functions, could corrupt the data structure. Each of the functions provided for you is described in the table below.
+- ERROR (**L4C_ERROR**) - This would be a very serious message indicating a major problem with the code that could result in erroneous output or a possible crash.
+- WARNING (**L4C_WARNING**) - A warning is less severe than an error but it still indicates that something is wrong with the program. Warnings are something that should be taken seriously even though they might not cause erroneous results or program termination.
+- INFO (**L4C_INFO**) - These are informational messages simply to tell the programmer that something has happened of interest inside the program. Debug messages are often informational so they can be removed from the production system.
+
+  When you are using the log4c library, you should interact with the Log4C data structures using the functions provided. These functions know how to manipulate the data structures correctly. Trying to manipulate the data structures yourself, without using the supplied functions, could corrupt the data structure. Each of the functions provided for you is described in the table below.
 
 | Function            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -99,15 +101,15 @@ The contents of the file **log.txt** looks like:
 
 ## Assertions
 
-An assertion is a special type of statement that is often put into production code when you want to determine that something has gone terribly wrong with the program. When an assertion is triggered. It produces an error message and terminates the program. You would use an assertion only when you discovered a problem with the software that you knew there was no way to recover from. Terminating the program is a serious action not to be taken lightly. Many programs are doing important things and should not be terminated unless there is no other choice.
+An assertion is a special type of statement that is often put into production code when you want to determine that something has gone terribly wrong with the program. When an assertion is triggered, it produces an error message and terminates the program. You would use an assertion only when you discovered a problem with the software that you knew there was no way to recover from. Terminating the program is a serious action not to be taken lightly. Many programs are doing important things and should not be terminated unless there is no other choice.
 
-You can access insertions from the header file **assert.h**. this file defines a function **assert(int)**. the integer parameter is really a boolean and if it is false it will trigger the assertion. Typically, you insert an expression which will evaluate to give a boolean which is false when something is terribly wrong. For example, if a pointer can never have a value which is NULL you could use `assert(ptr != NULL);`. This would stop the program if the pointer ever did have the value of NULL.
+You can access insertions from the header file **assert.h**. This file defines a function **assert(int)**. The integer parameter is really a Boolean and if it is false it will trigger the assertion. Typically, you insert an expression which will evaluate to give a boolean which is false when something is terribly wrong. For example, if a pointer can never have a value which is NULL you could use `assert(ptr != NULL);`. This would stop the program if the pointer ever did have the value of NULL.
 
 Assertions like these are usually used to detect impossible situations. You often put assertions in to test for conditions which you are convinced can never happen. You insert these with the assumption that they will never be triggered. However, if they ever are triggered then this tells you that the impossible happened and that you need to take a very serious look at your program to determine what went wrong.
 
 ## Lint
 
-Lint is a program which is used to check source code. Programs like this do what is referred to as a static analysis of the code, which can detect many common mistakes. The functions of a lint program have largely been replaced by warning messages in modern compilers. However, lint programs are typically more sensitive than compilers and can still point out potential sources of errors that a compiler might miss. Therefore, when faced with a bug which eludes detection, you might want to use a lint program to help find it. Further, running a lint program on your source code might yield higher quality source code.
+Lint is a program which is used to check source code. Programs like this do what is referred to as a _static analysis_ of the code, which can detect many common mistakes. The functions of a lint program have largely been replaced by warning messages in modern compilers. However, lint programs are typically more sensitive than compilers and can still point out potential sources of errors that a compiler might miss. Therefore, when faced with a bug which eludes detection, you might want to use a lint program to help find it. Further, running a lint program on your source code might yield higher quality source code.
 
 We will demonstrate this with an open source lint program for Windows called CPP check. You can download this program from https://github.com/danmar/cppcheck/releases/tag/2.8 .
 
@@ -121,11 +123,11 @@ The browse button on the top right will let you select your Visual Studio projec
 
 The list of warnings is at the top and you can click on on one and see the details and the line of code which caused the problem below.
 
-This is one of many lint tools and similar tools are available for most languages. They can be particularly useful for wekaly typed languages and scripting languages. For these languages, since parts of the code might seldomly be executed, they can detect errors before they occur.
+This is one of many lint tools and similar tools are available for most languages. They can be particularly useful for weakly typed languages and scripting languages. For these languages, since parts of the code might seldomly be executed, they can detect errors before they occur.
 
 ## Core Dumps
 
-Core dumps are a much older debugging technique which are rarely used nowadays. A core dump makes a copy of all of the memory allocated for program and writes it to a file. This information is in binary and is very laborious to go through by hand. There are automatic dumped readers which can allow you to explore these files in a more human readable way. These files normally contain all the binary instructions and data for the program and tell you where the program was when it terminated. This has become a last resort debugging technique which can be used after a program fails.
+Core dumps are a much older debugging technique which are rarely used nowadays. A core dump makes a copy of all of the memory allocated for program and writes it to a file. This information is in binary and is very laborious to go through by hand. There are automatic dump readers which can allow you to explore these files in a more human readable way. These files normally contain all the binary instructions and data for the program and tell you where the program was when it terminated. This has become a last resort debugging technique which can be used after a program fails.
 
 ## Conditional Compilation
 
@@ -156,11 +158,11 @@ This will include the printf in the code to be compiled if the DEBUG macro has b
 
 ## Debug and Release Builds
 
-Most of the Visual Studio project you build are built in debug mode. The mode can be selected from a drop down near the top of the Visual Studio IDE. When in debug mode, the code is compiled such that:
+Most of the Visual Studio projects are built in debug mode. The mode can be selected from a drop down near the top of the Visual Studio IDE. When in debug mode, the code is compiled such that:
 
 - it links to a set of libraries which have been compiled in debug mode,
 - It includes debugging information in an associated program database file that allows it to tell you exact line numbers on which errors occurred,
 - It does not optimize the code to make it as fast as possible,
 - It might include additional runtime checks to pick up errors that would normally not be picked up.
 
-When you switch your build two release mode, it no longer includes all the debugging information into the project, links to libraries which were not compiled in debug mode, and runs the optimizer to produce the fastest running code possible. While you are developing your program, you should always build in debug mode. You should only switch two release mode when you are ready to produce a production version of your software. Although the debug versions will run much slower, they give you all the tools necessary to debug the program while it is under development.
+When you switch to release mode, it no longer includes all the debugging information into the project, links to libraries which were not compiled in debug mode, and runs the optimizer to produce the fastest running code possible. While you are developing your program, you should always build in debug mode. You should only switch to release mode when you are ready to produce a production version of your software. Although the debug versions will run much slower, they give you all the tools necessary to debug the program while it is under development.

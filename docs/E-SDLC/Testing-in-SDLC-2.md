@@ -11,11 +11,11 @@ As we saw when we looked at the software development lifecycle, testing is one o
 
 ## Times to Test
 
-Work on testing begins as soon as the project starts and continues until the product is no longer being maintained. The following sections describe how testing can be done in the phases of the life cycle.
+Work on testing begins when the project starts and continues until the product is no longer being maintained. The following sections describe how testing can be done in the phases of the life cycle.
 
 ### During Requirements
 
-The planning phase when requirements are being gathered, we can actually start to work on our test plans. Once the requirements are partially known, we can start to:
+During the planning phase when requirements are being gathered, we can actually start to work on our test plans. Once the requirements are partially known, we can start to:
 
 - plan the scope of the quality assurance effort,
 - design black box tests that will determine if the resulting software meets requirements.
@@ -24,11 +24,11 @@ This will allow the quality assurance team to be active and productive even whil
 
 ### During Design
 
-As the design is finalized and ready to be implemented, the testing team can start to actually write some of their tests and they can now have a much better idea of harvest software is going to work. It might be possible at that point to actually start to design some integration tests based upon how the architecture is being revealed.
+Once the design is finalized and ready to be implemented, the testing team can start to write some of their tests now that they have a better idea of how the software is going to work. It might be possible at that point to start to design some integration tests based upon how the architecture is being revealed.
 
 ### During Implementation
 
-Testing should naturally be part of the implementation process. Unit tests should be available as the software is being written so with the developers can quickly check their functions to determine if they work correctly. Finding and fixing bugs in small pieces of software is relatively easy. Letting these bugs be propagated into much larger pieces of software makes them much more difficult to find and fix. Therefore it is actually vital that unit testing be done by the programmers as soon as they finish the functions to make sure that they behave as they should. The quality assurance team can be writing unit tests as the developers finish each function or module.
+Testing should naturally be part of the implementation process. Unit tests should be available as the software is being written so the developers can quickly check their functions to determine if they work correctly. Finding and fixing bugs in small pieces of software is relatively easy. Letting these bugs be propagated into much larger pieces of software makes them more difficult to find and fix. Therefore it is actually vital that unit testing be done by the programmers as soon as they finish the functions to make sure that they behave as they should. The quality assurance team can be writing unit tests as the developers write each function or module.
 
 ### During Testing
 
@@ -55,15 +55,15 @@ There are numerous approaches to software development. In this section, we will 
 
 ### Incremental Development
 
-Incremental development is a technique that builds software in pieces. The first piece is the architectural skeleton of the system. this would be the backbone of the system that really has little functionality on its own but allows all of the prime components to communicate with one another and it allows them to be built separately and plugged in as they are completed. This is a very successful technique because it breaks the software down into much smaller pieces that need to be implemented. Further, as each component is fitted into the architectural backbone it can then be tested.
+Incremental development is a technique that builds software in pieces. The first piece is the architectural skeleton of the system. this would be the backbone of the system that has little functionality on its own but allows the prime components to communicate with one another and it allows them to be built separately and plugged in as they are completed. This is a very successful technique because it breaks the software into much smaller pieces that need to be implemented. Further, as each component is fitted into the architectural backbone, it can be tested.
 
-During incremental development the test team will be working to design new tasks for the software as it is completed. These could be unit tests for the low level components as well as integration tests to determine whether the new software components have been integrated with the rest of the system correctly. As user interface components are added in, then there could be manual testing to ensure that the user interface does perform as required. Incremental development also implies incremental test development and testing. This type of development allows the development team to work hand in hand with the quality assurance team.
+During incremental development the test team will be working to design new tests for the software as it is completed. These could be unit tests for the low level components as well as integration tests to determine whether the new software components have been integrated with the rest of the system correctly. As user interface components are added in, there could be manual testing to ensure that the user interface does perform as required. Incremental development also implies incremental test development and testing. This type of development allows the development team to work hand-in-hand with the quality assurance team.
 
 ### Continuous Integration
 
 Continuous integration is a process for developing software where all the software is stored in a central repository. A repository is usually a network-based storage area that not only stores the software as it is checked in, but versions software by storing all the previous versions. This makes it easy to back out a change in case a mistake is made by simply going back to a previous version of a software.
 
-Since software is developed by a large team, it is important to ensure that the software in the repository that everyone checks out to add their own modifications to should be as clean as possible. If bugs get into the code in the repository, than other developers will check out that code and add onto it. This can cause days or even weeks of work to have to be discarded. To prevent the introduction of bugs into the repository, a rigorous test suite is run on all modifications done by every developer before it is checked into the repository. Software can be checked into the repository only after it has passed all of the tests.
+Since software is developed by a large team, it is important to ensure that the software in the repository that everyone checks out to add their own modifications to should be as clean as possible. If bugs get into the code in the repository, than other developers will build upon these bugs. This can cause days or even weeks of work to have to be discarded. To prevent the introduction of bugs into the repository, a rigorous test suite is run on modifications done by every developer before it is checked into the repository. Software can be checked into the repository only after it has passed all of the tests.
 
 This testing process can take a considerable amount of time and developers often finish a new feature at the end of the day and then run the test suite as they leave work for the day and let it run during the evening. This allows the developer to not waste time waiting for the test suite to finish running. In large software projects, it is not unusual for the test suite to take two to three hours to run.
 
@@ -80,7 +80,7 @@ A typical scenario using continuous integration would look like this:
 
 Adding new code features would follow a similar series of steps but might involve the addition of new tests to the test suite to test the new features added. These tests might be added by the developer or by working with a member of the quality assurance team.
 
-Continuous integration can be done either manually or automated. When automated, the developer checks in the software and the software is built and the tests are run automatically. Reports are then sent to the interested parties to tell them of the success or failure of the operations. Many systems will not integrate the software into the main code base unless it has built correctly and passed all tests. One possible way of automatiing continuous integration is shown below.
+Continuous integration can be done either manually or automated. When automated, the developer checks in the software and the software is built and the tests are run automatically. Reports are then sent to the interested parties to tell them of the success or failure of the tests. Many systems will not integrate the software into the main code base unless it has built correctly and passed all tests. One possible way of automating continuous integration is shown below.
 
 !["Automated Continuous Integration" ](/img/continuous-integration-1.png)
 

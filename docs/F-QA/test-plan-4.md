@@ -7,11 +7,11 @@ description: How to write a software test plan.
 
 # The Software Test Plan
 
-This software test plan is one of the most fundamental documents for software testing. However, with the rise of agile processes, it is frequently ignored. This is unfortunate because the test plan provides an overview of how all the software testing should be conducted.
+The software test plan is one of the most fundamental documents for software testing. However, with the rise of agile processes, it is frequently ignored. This is unfortunate because the test plan provides an overview of how all the software testing should be conducted.
 
 The test plan is really a project plan for the system testing. It is really the instruction manual for the testing process. The test plan should include:
 
-- A description of how the testing will be performed at a particular level, this could be a description of how testing for the entire system is performed or how user acceptance testing is to be performed.
+- A description of how the testing will be performed at a particular level. This could be a description of how testing for the entire system is performed or how user acceptance testing is to be performed.
 
 - The objectives of the testing which should describe what is being tested and what this will prove,
 
@@ -29,19 +29,19 @@ The test plan is really a project plan for the system testing. It is really the 
 
 The test strategy is a short, separate document which is often written before the test plan. The purpose of the test strategy, is to define the major test objectives and to make sure that the test aligns with the organizational needs and goals. The test strategy is to make sure that the big picture of what the test is all about and why the test is being conducted is not lost. The test strategy document will typically include:
 
-- It is a description of what makes this project unique such as the way it is used or for technology involved,
+- A description of what makes this project unique such as the way it is used or the technology involved,
 
-- A description of the SuccessFactors that are being tested, for example, reliability correctness usability, etc,
+- A description of the success factors that are being tested, for example, reliability, correctness, usability, etc,
 
-- Risks involved to the business the project the product, etc,
+- Risks involved to the business, the project, the product, etc,
 
 - The roles and responsibilities of the people who will conduct the test,
 
 - A rough schedule of the test,
 
-- The level of the test for example component testing integration testing or system acceptance testing,
+- The level of the test for example component testing, integration testing, or system acceptance testing,
 
-- The type of testing to be performed whether it be functional testing, security testing, usability testing or some other type.
+- The type of testing to be performed whether it be functional testing, security testing, usability testing, or some other type.
 
 ---
 
@@ -85,13 +85,13 @@ This is a sample of a test strategy. The phases of the tests could be:
   - Test Tools
     - a list of the testing tools that will be required
   - Test Type
-    - list of the various types of testing to be done (functional, compliance, security, regression, etc.) and a high-level description of how the tests will be performed.
+    - a list of the various types of testing to be done (functional, compliance, security, regression, etc.) and a high-level description of how the tests will be performed.
     - Eg. Functional testing using black box and white box test data
   - Test Data
-    - description of how the test data is to be created. It could be sample data from an existing database with dummy names used instead of real data. It could involve the creation of specific data for usit testing, _etc._
+    - a description of how the test data is to be created. It could be sample data from an existing database with dummy names used instead of real data. It could involve the creation of specific data for usit testing, _etc._
 - **Test Plan**
   - the people on the test team and their responsibilities,
-  - schedule listing the major parts of the testing, when they will start, end and the expected deliverables.
+  - a schedule listing the major parts of the testing, when they will start, end, and the expected deliverables.
 - **Environment**
   - a list and description of the hardware and software components needed for the testing,
   - any special training needed for the testing team.
@@ -105,7 +105,7 @@ This is a sample of a test strategy. The phases of the tests could be:
   - a general description of pass/fail criteria,
 - **Defect Management**
   - This section lays out how defects will be reported and managed,
-  - it will lay out definitions for ranking defects importance as Critical, High, Medium, Low, or cosmetic or informational.
+  - it will lay out definitions for ranking defects importance as Critical, High, Medium, Low, or Cosmetic or Informational.
 - **Risks**
   - this will list the risks to the project due to defects discovered during testing. It should have a workaround for most of the risks so that the system can continue to be used or development can continue.
 
