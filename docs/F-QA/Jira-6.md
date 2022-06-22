@@ -15,15 +15,15 @@ Jira is a popular tool for managing teams working on software projects. Jira is 
 - Software tests which need to be executed,
 - _etc._
 
-A project is normally set up by the project administrator or project lead who then invites multiple other people to join the project. All of these people have access to the jira board displaying information about the project and they can quickly see the state of the project. One of the common ways to display the state of a project is as a Kanban board.
+A project is normally set up by the project administrator or project lead who then invites multiple other people to join the project. All of these people have access to the Jira board displaying information about the project and they can quickly see the state of the project. One of the common ways to display the state of a project is as a Kanban board.
 
 ## Using Jira
 
 Jira is one of the more popular tools for managing software projects today. It is certainly not the only tool, but it is one of the currently popular tools. Some of the capabilities that tools like this provide include:
 
-- Add users to your project,
+- Adding users to your project,
 - Creating issues and placing them in one of the Kanban columns,
-- Assigning issues two one of the team members,
+- Assigning issues to one of the team members,
 - Moving issues through the Kanban columns,
 - Notifying team members when the status of an issue in which they are interested changes.
 
@@ -31,7 +31,7 @@ Jira is one of the more popular tools for managing software projects today. It i
 
 You can see the three Kanban columns in the image above. Issues can be created by using the **Create** button at the top. Once you assign an issue to a team member, the member will be notified by email. Issues can be dragged between columns as they move through the process. The **+** sign at the right allows you to add new columns to the board to customize it to your process.
 
-When the board is created, it might not have all the isse types you want available. You can go to the project settings on the bottom left of the screen above and then select issue types to show the screen below.
+When the board is created, it might not have all the issue types you want available. You can go to the project settings on the bottom left of the screen above and then select issue types to show the screen below.
 
 !["Jira Issue Types" ](/img/jira-issue-types.jpg)
 
@@ -52,11 +52,14 @@ After creating an issue, the first thing you want to do is to set the type of th
 - An epic is part of the story describing the system which is being implemented.
 
 You can create additional types of issues if you need to by going to the project settings and modifying the issue types.
+
+#### Brief Description
+
 The brief description is a short, usually one line, description of the issue. It should be short and descriptive so that people can read it and quickly understand what the issue is about.
 
 #### Long Description
 
-The long description is where you get to write all of the details all of the issue. Here you can describe what the issue is about, what it is related to, how it has to be resolved and other information that you would like to put down about the issue. If you need fancy formatting in this section, you can use markdown to format your text.
+The long description is where you get to write the details of the issue. Here you can describe what the issue is about, what it is related to, how it has to be resolved and other information that you would like to put down about the issue. If you need fancy formatting in this section, you can use markdown to format your text.
 
 #### Assigning an Issue
 
@@ -64,7 +67,7 @@ When an issue is created, it can be left unassigned which means that no worker h
 
 #### Labels
 
-Labels can be used to create categories for issues. To create a label, all you have to do is type it into the labels field. Once a label has been created, it will appear on the dropdown off available labels. Labels can be used to group issues into various categories. For example, you could have a label called implementation which groups together all issues related to actually performing part of the implementation of the project. You could have another category called test plan which is used to gather together all test plans.
+Labels can be used to create categories for issues. To create a label, all you have to do is type it into the labels field. Once a label has been created, it will appear on the dropdown of available labels. Labels can be used to group issues into various categories. For example, you could have a label called _implementation_ which groups together all issues related to performing part of the implementation of the project. You could have another category called _test plan_ which is used to gather together all test plans.
 
 #### Linking Issues
 
@@ -89,19 +92,19 @@ Voting for an issue can be done to show that many people on the team would like 
 
 #### Add Viewer
 
-You can add viewers who will be notified if an issue changes. Just click on the highball and it will display a form to add a new viewer.
+You can add viewers who will be notified if an issue changes. Just click on the eyeball and it will display a form to add a new viewer.
 
 #### Change Kanban Column
 
 You can change the Kanban column in which this issue resides by using the dropdown box to select a different column. This is another way of changing the status of an issue rather than simply dragging it between columns in the Kanban board.
 
-#### Create sub task
+#### Create Sub-task
 
-A sub task, or a child issue, is a smaller task which has to be done in order to complete the issue. You might make an issue down into child issues to split the work into smaller units of work or to be able to split it up based on the skills required to do it. Once you click the button to add a child issue, it will display a form allowing you to put in a brief description of the child issue, assign a team member to the issue, and set the status of the child issue.
+A sub-task, or a child issue, is a smaller task which has to be done in order to complete the issue. You might break an issue down into child issues to split the work into smaller units of work or to be able to split it up based on the skills required to do it. Once you click the button to add a child issue, it will display a form allowing you to put in a brief description of the child issue, assign a team member to the issue, and set the status of the child issue.
 
 ### Comments
 
-You can add comments to an issue dad say just about anything you want. It could be a comment on something which hole is holding up the issue, a comment about a problem encountered in the issue, or something that might be delaying the issue. You can simply add a new comment onto the list and it will be added.
+You can add comments to an issue to say anything you want. It could be a comment on something which is holding up the issue, or a comment about a problem encountered in the issue. You can simply add a new comment onto the list and it will be added.
 
 #### History
 

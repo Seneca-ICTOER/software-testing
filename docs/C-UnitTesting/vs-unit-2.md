@@ -40,11 +40,11 @@ double cube(double n)
 
 As you can see, we create two functions: one to square a number and another to cube a number. Testing that these functions work is a simple matter but seeing how it is done will illustrate all the steps in creating a test project for an existing project.
 
-Open the project you want to test and then click on the name of the solution at the top of the solution explorer. Then, from the File menu select New | Project. This will display the new project menu and you should select a native unit test project for C++ on Windows, as shown below.
+Open the project you want to test and then click on the name of the solution at the top of the solution explorer. Then, from the File menu, select **New | Project**. This will display the new project menu and you should select a **native unit test project for C++ on Windows**, as shown below.
 
 !["Dialog to create a unit testing project in Visual Studio" ](/img/vs-create-unit-project.jpg)
 
-Once the project has been created, you will see it at the bottom of the solution explorer. They have already written a skeleton unit test program for you called UnitTest1.cpp (or whatever name you selected). I have modified this file to look as shown below.
+Once the project has been created, you will see it at the bottom of the solution explorer. A skeleton unit test program has been created for you called UnitTest1.cpp (or whatever name you selected). I have modified this file to look as shown below.
 
 ```C
 #include "pch.h"
@@ -86,7 +86,7 @@ namespace MathTestSuite
 }
 ```
 
-I modified the namespace to be more meaningful and called it **MathTestSuite**. Within the namespace, I have created two classes. Each class would usually represent the tests for a single function or feature. Placing tests in classes provides a convenient way to group tests together. Inside each class, there are test methods which each test one particular aspect of the code. In this example, I have one class to test the functions and a second class to test how the functions might work together. There is no set way to do this and you are encouraged to layout your tests in the most organized fashion you can for your particular project.
+I modified the namespace to be more meaningful and called it **MathTestSuite**. Within the namespace, I have created two test classes. Each class would usually represent the tests for a single function or feature. Placing tests in classes provides a convenient way to group tests together. Inside each class, there are test methods which each test one particular aspect of the code. In this example, I have one class to test the functions and a second class to test how the functions might work together. There is no set way to organize this and you are encouraged to layout your tests in the most organized fashion you can for your particular project.
 
 Inside the tests, you call your functions with specific values and then use an assertion to determine if the result is correct by comparing it to a known value. The Assert class has many methods that allow you to compare values. If the two values pass the comparison, the test passes, otherwise it fails.
 

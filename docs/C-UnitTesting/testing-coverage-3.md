@@ -7,11 +7,12 @@ description: The importance and tools for code coverage.
 
 # Testing Coverage
 
-We design our tests based upon black box and white box testing principles. This means that the test data has been selected to prove that certain inputs provide the correct outputs for black box testing as well as to drive the code through certain branches based upon white box testing. Unfortunately, we can still miss code and leave code which has never been executed by any of the tests. Code which has never been executed is well known to have bugs in it that have never been found, for the obvious reason that it was never executed. The goal of testing coverage is to find the code which was executed as well as the code which has never been executed. Once we identify the code which has never been executed, we can then go on to design tests to exercise that particular piece of code.
+We design our tests based upon black box and white box testing principles. This means that the test data has been selected to prove that certain inputs provide the correct outputs for black box testing as well as to drive the code through certain branches based upon white box testing. Unfortunately, we can still miss code which has never been executed by any tests. Code which has never been executed often has bugs in it that have never been found, for the obvious reason that it was never executed. The goal of testing coverage is to find the code which was executed as well as the code which has never been executed. Once we identify the code which has never been executed, we can then go on to design tests to exercise that particular piece of code.
 
-Testing coverage is a facility offered by many compilers. While Visual Studio does have this capability, it is only available in the enterprise version of the tool. This means that it is not available to many programmers and therefore we will use the tool provided by GCC. While it would certainly be preferable to do our tests in the same environment that we do our coverage analysis. It is complicated by the fact that we are using the testing tool from Visual Studio and they do not make their coverage analysis tool available to us. As a result, we will largely be demonstrating how to use coverage analysis tool without actually applying it to our testing regime.
+Testing coverage is a facility offered by many compilers. While Visual Studio does have this capability, it is only available in the enterprise version of the tool. This means that it is not available to many programmers and therefore we will use the tool provided by GCC. While it would be preferable to do our tests in the same environment that we do our coverage analysis, it is complicated by the fact that we are using the testing tool from Visual Studio and they do not make their coverage analysis tool available to us. As a result, we will largely be demonstrating how to use coverage analysis tool without actually applying it to our testing regime.
 
-In order to do testing coverage, you normally have to compile with special flags or options that tell your compiler to build in additional code that actually counts the number of times every line is executed. Well theoretically, you could write your own coverage analysis tool by writing out a message every time align was executed. This would be fairly labor intensive to do and even if you automated it you would have to maintain two different versions of the code.
+In order to do testing coverage, you normally have to compile with special flags or options that tell your compiler to build in additional code that actually counts the number of times every line is executed. While theoretically, you could write your own coverage analysis tool by writing out a message every time a line was executed, this would be labor intensive to do and, even if you automated it, you would have to maintain two different versions of the code.
+
 We are going to demonstrate how to do coverage using GCC with the following program which inserts one string into another.
 
 ```c
@@ -55,9 +56,9 @@ int main(void)
 }
 ```
 
-When we compile this code, we have to provide the additional flags to the compiler instructing it to build in the instructions to actually count how many times each line is executed. The command to compile the program shown above, insert.c, is:
+When we compile this code, we have to provide the additional flags to the compiler instructing it to build in the instructions to count how many times each line is executed. The command to compile the program shown above, insert.c, is:
 ` gcc -Wall -fprofile-arcs -ftest-coverage -o insert insert.c`
-After we compile the code with these flags. We then have to execute the program once to generate data that is stored in various files. These files contain the information it will need to count how many times each line was executed. To actually prepare the files for viewing by humans, we use the gcov command:
+After we compile the code with these flags, we then have to execute the program once to generate data that is stored in various files. These files contain the information needed to count how many times each line was executed. To prepare the files for viewing by humans, we use the gcov command:
 ` gcov insert.c`
 This command produces a new file called insert.c.gcov which is shown next.
 
@@ -107,4 +108,4 @@ This command produces a new file called insert.c.gcov which is shown next.
 
 ```
 
-This file contains the original source code and line numbers. The first column, before the line numbers is an indication of how many times that line was executed. The symbols "-:" indicate this is not an executable line and was never executed. Hash signs (#) indicate executable lines which were never executed. These are what you should be looking for in order to find code which was not tested. The numbers in the first column are the counts of how many times each executable line was executed.
+This file contains the original source code and line numbers. The first column, before the line numbers, is an indication of how many times that line was executed. The symbols "-:" indicate this is not an executable line and was never executed. Hash signs (#) indicate executable lines which were never executed. These are what you should be looking for in order to find code which was not tested. The numbers in the first column are the counts of how many times each executable line was executed.

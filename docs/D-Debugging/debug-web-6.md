@@ -7,7 +7,7 @@ description: How to debug on web browsers.
 
 # Debugging On Web Browsers
 
-Most web browsers have their own debugging environment. We will demonstrate how to use the debugging tools on Google Chrome. However, most web browsers will have similar tools available to the web developer. For this demonstration, we will work on the following HTML page.
+Most web browsers have their own debugging environment. We will demonstrate how to use the debugging tools on Google Chrome. Most web browsers will have similar tools available to the web developer. For this demonstration, we will work on the following HTML page.
 
 ```html
 <!DOCTYPE html>
@@ -64,7 +64,7 @@ There are a series of step controls that allow you to (left to right, as shown):
 - activate / deactivate all breakpoints
 - pause on exceptions
 
-You can also click on a line in the editor, right click and select _Continue to here_ to execute util a specific location in the code.
+You can also click on a line in the editor, right click and select **Continue to here** to execute util a specific location in the code.
 
 The console tab at the top right switches you to an interactive console where you can type JavaScript and have it evaluated. As the next diagram shows, you can type expressions, including those that reference variables in the active scope.
 

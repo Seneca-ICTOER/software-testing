@@ -7,7 +7,7 @@ description: Describes the software testing life cycle.
 
 # The Software Testing Life Cycle
 
-The software testing lifecycle (STLC) lays out his series of steps to create and execute software tests. It is analogous to the software development lifecycle which lays out a series of steps to plan and develop software artifacts.
+The software testing lifecycle (STLC) lays out a series of steps to create and execute software tests. It is analogous to the software development lifecycle which lays out a series of steps to plan and develop software artifacts.
 
 The benefits of using the STLC include:
 
@@ -27,7 +27,7 @@ We will now look at each of the phases of the STLC in depth.
 
 ### Requirements Analysis
 
-As the project requirements are identified, these requirements are examined to identify their testable aspects. The requirements can be either functional or non functional and we will identify what needs to be tested for each of the requirements.
+As the project requirements are identified, these requirements are examined to identify their testable aspects. The requirements can be either functional or non-functional and we will identify what needs to be tested for each of the requirements.
 
 **_ Entry Criteria_** - A set of requirements and acceptance criteria for the requirements.
 
@@ -79,7 +79,7 @@ It is during this phase that the test environment is set up. This might include 
 
 ### Test Execution
 
-During the test execution phase the tests are deployed into the testing environment and then our executed using the input data the expected test results are compared to the actual results and gathered to create a report which was backed to the development team.
+During the test execution phase, the tests are deployed into the testing environment and then are executed using the input data. The expected test results are compared to the actual results and gathered to create a report which was sent to the development team.
 
 **_Entry criteria_**- all of the exit criteria from the previous steps.
 

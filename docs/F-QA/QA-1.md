@@ -9,9 +9,9 @@ description: An introduction to quality assurance.
 
 In the early days of software development, quality assurance was almost overlooked. If the program worked and met minimal standards it was considered good enough. Over the years, software has grown larger, more complicated, and has been integrated into many aspects of our lives. Whereas in the early days software was run by professionals who could work around the many glitches that were found, as software migrated to use by the general population, it had to be of much higher quality. As a result of this, quality assurance, once relegated to an afterthought, has become an important part of the software development process.
 
-Software quality assurance is a process to assure that all parts of a software development process are monitored and comply with relevant standards and meet all project requirements. There are quality assurance standards like ISO 9000 and others that might need to be complied with. Modern software quality assurance looks at the entire software development lifecycle from gathering requirements, two design, coding, and even documentation. We will focus on the software quality assurance aimed at coding and ensuring that the resulting code is of high quality and meets all the requirements.
+Software quality assurance is a process to assure that all parts of the software development process are monitored and comply with relevant standards and meet all project requirements. There are quality assurance standards like ISO 9000 and others that might need to be complied with. Modern software quality assurance looks at the entire software development lifecycle from gathering requirements, to design, coding, and even documentation. We will focus on software quality assurance aimed at coding and ensuring that the resulting code is of high quality and meets the requirements.
 
-The rest of this section we'll look at some of the documents that we need to produce as part of the quality assurance process and then we'll move on to look at how we can use software tools to help us manage the entire process.
+The rest of this section will look at some of the documents we need to produce as part of the quality assurance process and then we'll move on to look at how we can use software tools to help us manage the entire process.
 
 ## Agile Projects
 
@@ -21,26 +21,26 @@ The agile approach to project management has a much more flexible way of breakin
 
 ### Themes
 
-A theme is one of the major goals of the project. It is usually a long term objective that is a very major and significant component of the project. a theme can also be viewed as a major strategic business objective. For example, if you decide you want to break into the project management software market then this would be the theme of your project. Of course, a theme is too broad and objective and it needs to be broken down into smaller, more manageable objectives.
+A theme is one of the major goals of the project. It is usually a long term objective that is a major and significant component of the project. A theme can also be viewed as a major strategic business objective. For example, if you decide you want to break into the project management software market then this would be the theme of your project. Of course, a theme is too broad an objective and it needs to be broken down into smaller, more manageable objectives.
 
 ### Epics
 
-An epic is a larger body of work that constitutes one of the main components of a theme. Epics are typically measurable which means that you can readily determine when they have been completed. For our example all penetrating the project management software market, we might layout the following two epics:
+An epic is a larger body of work that constitutes one of the main components of a theme. Epics are typically measurable which means that you can readily determine when they have been completed. For our example of penetrating the project management software market, we might layout the following two epics:
 
-- New features -- an effort to develop new features for our project management software,
-- Enhancement -- and effort to enhance the current features of our software to make it suitable for use by project managers.
+- New features - an effort to develop new features for our project management software,
+- Enhancement - and effort to enhance the current features of our software to make it suitable for use by project managers.
 
 These epics are major pieces of work which need to be broken down into smaller, more manageable steps.
 
 ### Issues
 
-An issue it is one of the tasks that needs to be completed as part of an epic. An issue is a small enough task that it can be performed in a reasonable amount of time, say a few days or a week. Issues are readily actionable which means that you can easily do work to complete them. for the new features epic of our attempt to penetrate the project management software market, we could break it down into 3 issues:
+An issue it is one of the tasks that needs to be completed as part of an epic. An issue is a small enough task that it can be performed in a reasonable amount of time, say a few days or a week. Issues are readily actionable which means that you can easily do work to complete them. For the new features epic of our attempt to penetrate the project management software market, we could break it down into 3 issues:
 
 - Researching the project management tool market,
 - Designing new features that we want to implement,
 - Developing the new features that we are going to implement.
 
-Each of these issues is still fairly large and it can be broken down further into child issues or subtasks. Sub tasks could be created to break it down into more manageable units or it could be broken down based upon the skills necessary to perform the sub task.
+Each of these issues is still fairly large and it can be broken down further into child issues or sub-tasks. Sub-tasks could be created to break it down into more manageable units or it could be broken down based upon the skills necessary to perform the sub-task.
 
 !["Themes, epics and issues." ](/img/theme-epic-issue.jpg)
 
@@ -48,19 +48,19 @@ The breakdown into themes, epics and issues is highly flexible and can be change
 
 ### User Stories
 
-In the traditional management process, individual tasks were created based upon the technical needs of the project and contained lots of details of the technical work that needed to be performed. The problem with this, is that it misses the big picture. The developer does not really see how this small work item fits into the larger picture and what functionality it is really going to deliver to the end user.
+In the traditional management process, individual tasks were created based upon the technical needs of the project and contained lots of details of the technical work that needed to be performed. The problem with this was that it missed the big picture. The developer did not see how this small work item fitted into the larger picture and what functionality it was going to deliver to the end user.
 
-In an effort to keep the developers informed of the importance of what they're working on and to let them see how it fits into the big picture, it has been common to specify tasks as user stories. The user story is a small piece of work that represents some kind of functionality that the end user actually wants implemented. The implication is that rather than building technical details, we now build units of functionality that are desired by the end user.
+In an effort to keep the developers informed of the importance of what they're working on and to let them see how it fits into the big picture, it has been common to specify tasks as user stories. The user story is a small piece of work that represents some kind of functionality that the end user wants implemented. The implication is that rather than building technical details, we now build units of functionality that are needed by the end user.
 
-User stories are effective because they convey the users perspective to developer and they are also specified in terms that the customer can readily understand. By focusing on the customers needs, we do not lose focus and deliver what the customer wants. User stories create a shared understanding amongst all shareholders in the project so that everybody knows what is being developed and why. User stories also allow us to prioritize the work items based upon their value to the business.
+User stories are effective because they convey the user's perspective to the developer and they are also specified in terms that the customer can readily understand. By focusing on the customers needs, we do not lose focus and deliver what the customer wants. User stories create a shared understanding amongst all shareholders in the project so that everybody knows what is being developed and why. User stories also allow us to prioritize the work items based upon their value to the business.
 
 As an example of a user story, consider:
 
 >     As a visitor to the project management website, I want to be able to filter the different projects based upon the project name as well as the personnel working on the project.
 
-You should write your user stories so that they define when the story is done. In other words, they should make it obvious when this task is complete and they should contain something that tells us what we can test for the determine when the task has finished.
+You should write your user stories so that they define when the story is done. In other words, they should make it obvious when this task is complete and they should contain something that tells us how we can test to determine when the task has finished.
 
-User stories usually correspond to an issue but that does not mean that they are atomic units. Issues can be broken down further into child issues or subtasks. These child issues can, of course, have their own user stories attached to them.
+User stories usually correspond to an issue but that does not mean that they are atomic units. Issues can be broken down further into child issues or sub-tasks. These child issues can, of course, have their own user stories attached to them.
 
 Each user story should be **INVEST**able:
 
@@ -75,7 +75,7 @@ Each user story should be **INVEST**able:
 
 !["Kanban Board" ](/img/kanban-board-user.png)
 
-A Kanban board displays the progress of our project as three or more columns. At its simplest, a Kanban board has a list of requested issues in the first column, issues which are in progress in the middle column and issues which are completed in the right column.
+A Kanban board displays the progress of our project as three or more columns. At its simplest, a Kanban board has a list of requested issues in the first column, issues which are in progress in the middle column, and issues which are completed in the right column.
 
 | Requested                       | In Progress | Done |
 | ------------------------------- | ----------- | ---- |
@@ -89,4 +89,4 @@ To use a Kanban board, issues start out in the leftmost column until people are 
 | ------------------------------- | ----------- | --- | ---- |
 | Implement skeletal architecture |             |     |      |
 
-One of the things you can use a a Kanban board for is to limit the amount of work in progress. Many of the tools that use the Kanban method allow you to put a limit on the number of issues which can be placed in any of the in-progress columns. This is to ensure that your team is not overloaded by having too many issues in progress at the same time.
+One of the things you can use a Kanban board for is to limit the amount of work in progress. Many of the tools that use the Kanban method allow you to put a limit on the number of issues which can be placed in any of the in-progress columns. This is to ensure that your team is not overloaded by having too many issues in progress at the same time.

@@ -7,11 +7,11 @@ description: How to write a software test case.
 
 # Software Test Cases
 
-The test plan describes at a high level testing for the entire project. This is a very general purpose document that is designed to be read by many people on both the QA team, the development team, and management. It describes many different things including the schedule, the personnel involved, the scope of testing, and potential risks to the project. What it does not contain is the low level details of how each of the tests is to be conducted. This information on how to conduct an individual tests is included in the test case.
+The test plan describes at a high level testing for the entire project. This is a very general purpose document that is designed to be read by many people on both the QA team, the development team, and management. It describes many different things including the schedule, the personnel involved, the scope of testing, and potential risks to the project. What it does not contain is the low level details of how each of the tests is to be conducted. This information is included in the test case.
 
 A test case contains all the information necessary to carry out a particular test including:
 
-- Optionally environment in which the test needs to be conducted,
+- Optionally, the environment in which the test needs to be conducted,
 - a description of the test data and how it can be obtained,
 - The expected results of the test,
 - The status of a test indicating whether it has been completed or not.
@@ -40,9 +40,9 @@ The test case should include the following:
 - The actual result of the test that was obtained and any post conditions which occurred as a result of executing the test,
 - Whether the test passed or failed.
 
-The exact format all of the test case might vary between companies, projects, and even between tests within the same project. you should write your test cases to be as simple as possible. They should be easily red and easily interpreted. The instructions should be easy to follow and unambiguous.
+The exact format of the test case might vary between companies, projects, and even between tests within the same project. You should write your test cases to be as simple as possible. They should be easily read and easily interpreted. The instructions should be easy to follow and unambiguous.
 
-A test suite is really a collection of test plans which have been organized together because they share something in common. It could be that they are testing the same part of the software or it could be that they are testing the same business requirements. The test suite is a way for you to organize your individual low level tests into collections of related tests.
+A test suite is a collection of test plans which have been organized together because they share something in common. It could be that they are testing the same part of the software or it could be that they are testing the same business requirements. The test suite is a way for you to organize your individual low level tests into collections of related tests.
 
 The following could be a functionality test:
 

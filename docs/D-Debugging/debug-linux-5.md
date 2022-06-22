@@ -97,7 +97,7 @@ __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:50
 (gdb)
 ```
 
-The output above shows that we typed `run` to begin executing the program. The program failed as expected and said it failed in a system call while raising a signal. This is not very helpful so we use the `where` command to ask it where the program is stopped. This produces the stack trace shown that tells us that it was on line 24 of main when it check to see if the stack was OK and found it had been corrupted.
+The output above shows that we typed `run` to begin executing the program. The program failed as expected and said it failed in a system call while raising a signal. This is not very helpful so we use the `where` command to ask it where the program is stopped. This produces the stack trace shown that tells us that it was on line 24 of main when it checked to see if the stack was OK and found it had been corrupted.
 
 This is not very useful information and we need to investigate further to find out where the program failed. To do this, we can set a breakpoint and run the program again.
 
