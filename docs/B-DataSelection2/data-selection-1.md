@@ -82,10 +82,10 @@ This code is designed to concatenate the src string onto the end of the dest str
 - a string that is longer than the allocated storage to prove it will fail
   - concat("012345678901234", "xy")
 
-Those tests cover all of the black box cases. Reading the code, we also see that it can handle either of the parameters being NULL. These are special cases that need to be tested. If the handling of NULL had not been in the specification for the funtion, we would only find it by inspecting the code and it would be a white box test. To do this test, we add:
+Those tests cover all of the black box cases. Reading the code, we also see that it can handle either of the parameters being NULL. These are special cases that need to be tested. If the handling of NULL had not been in the specification for the function, we would only find it by inspecting the code and it would be a white box test. To do this test, we add:
 
-- {concat(NULL, "a"),
-- concat(tmp, NULL) }.
+- \{concat(NULL, "a"),
+- concat(tmp, NULL) \}.
 
 In the actual tests I created, I ended up with 15 tests for string concatenation. This gives high confidence the function works and is much shorter than exhaustive testing.
 
